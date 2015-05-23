@@ -2,7 +2,7 @@ Summary:	A not-so trivial keyword/data database system
 Summary(pl.UTF-8):	Nie-Trywialna Baza danych
 Name:		ntdb
 Version:	1.0
-Release:	2
+Release:	3
 License:	LGPL v3+
 Group:		Libraries
 Source0:	http://samba.org/ftp/tdb/%{name}-%{version}.tar.gz
@@ -60,7 +60,8 @@ CFLAGS="%{rpmcflags}" \
 PYTHONDIR=%{py_sitedir} \
 ./configure \
 	--prefix=%{_prefix} \
-	--libdir=%{_libdir}
+	--libdir=%{_libdir} \
+	--disable-rpath
 
 %{__make} \
 	V=1
